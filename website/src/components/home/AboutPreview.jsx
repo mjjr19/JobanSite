@@ -11,8 +11,16 @@ const AboutPreview = () => {
         <FadeInSection direction="right">
           <div className="about-image">
             <div className="image-placeholder">
-               {/* Placeholder for Sheikh's Image */}
-               <span>Sheikh Mohamad Joban</span>
+              <img 
+                src="/Biopic.jpg" 
+                alt={bio.name}
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  display: 'block'
+                }}
+              />
             </div>
           </div>
         </FadeInSection>

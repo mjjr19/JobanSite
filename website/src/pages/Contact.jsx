@@ -1,29 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import SectionHeader from '../components/common/SectionHeader';
 import FadeInSection from '../components/animations/FadeInSection';
-import { contactCategories } from '../data/content';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    category: contactCategories[0],
-    message: ''
-  });
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert('Thank you for your message. This is a demo form.');
-    // Handle submission logic here
-  };
+  const email = 'mjoban@comcast.net';
 
   return (
     <div className="page-content section-padding" style={{ marginTop: '80px' }}>
@@ -32,71 +13,36 @@ const Contact = () => {
         
         <div className="contact-container" style={{ maxWidth: '800px', margin: '0 auto' }}>
           <FadeInSection>
-            <form onSubmit={handleSubmit} style={{ backgroundColor: 'white', padding: '40px', borderRadius: '8px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}>
-              <div style={{ marginBottom: '20px' }}>
-                <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500' }}>Full Name</label>
-                <input 
-                  type="text" 
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  style={{ width: '100%', padding: '12px', borderRadius: '4px', border: '1px solid #ddd', fontFamily: 'inherit' }}
-                />
-              </div>
-
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', marginBottom: '20px' }}>
-                <div>
-                  <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500' }}>Email</label>
-                  <input 
-                    type="email" 
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    style={{ width: '100%', padding: '12px', borderRadius: '4px', border: '1px solid #ddd', fontFamily: 'inherit' }}
-                  />
-                </div>
-                <div>
-                  <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500' }}>Phone (Optional)</label>
-                  <input 
-                    type="tel" 
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    style={{ width: '100%', padding: '12px', borderRadius: '4px', border: '1px solid #ddd', fontFamily: 'inherit' }}
-                  />
-                </div>
-              </div>
-
-              <div style={{ marginBottom: '20px' }}>
-                <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500' }}>Purpose</label>
-                <select 
-                  name="category"
-                  value={formData.category}
-                  onChange={handleChange}
-                  style={{ width: '100%', padding: '12px', borderRadius: '4px', border: '1px solid #ddd', fontFamily: 'inherit', backgroundColor: 'white' }}
+            <div style={{ backgroundColor: 'white', padding: '60px 40px', borderRadius: '8px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)', textAlign: 'center' }}>
+              <div style={{ marginBottom: '3rem' }}>
+                <FaEnvelope style={{ fontSize: '3rem', color: 'var(--color-gold)', marginBottom: '1.5rem' }} />
+                <h2 style={{ fontSize: '2rem', marginBottom: '1rem', color: 'var(--color-navy)' }}>Email Sheikh Joban</h2>
+                <p style={{ fontSize: '1.1rem', color: 'var(--color-charcoal)', marginBottom: '2rem' }}>
+                  For inquiries, event invitations, religious guidance, or any other matters, please reach out via email.
+                </p>
+                <a 
+                  href={`mailto:${email}`}
+                  className="btn btn-primary btn-large"
+                  style={{ 
+                    display: 'inline-block',
+                    fontSize: '1.2rem',
+                    padding: '15px 40px'
+                  }}
                 >
-                  {contactCategories.map(cat => (
-                    <option key={cat} value={cat}>{cat}</option>
-                  ))}
-                </select>
+                  <FaEnvelope style={{ marginRight: '10px', verticalAlign: 'middle' }} />
+                  {email}
+                </a>
               </div>
 
-              <div style={{ marginBottom: '30px' }}>
-                <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500' }}>Message</label>
-                <textarea 
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows="5"
-                  style={{ width: '100%', padding: '12px', borderRadius: '4px', border: '1px solid #ddd', fontFamily: 'inherit' }}
-                ></textarea>
+              <div style={{ borderTop: '1px solid #eee', paddingTop: '2rem', marginTop: '2rem' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', alignItems: 'center' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                    <FaMapMarkerAlt style={{ color: 'var(--color-gold)', fontSize: '1.5rem' }} />
+                    <span style={{ fontSize: '1.1rem', color: 'var(--color-charcoal)' }}>Redmond, Washington</span>
+                  </div>
+                </div>
               </div>
-
-              <button type="submit" className="btn btn-primary" style={{ width: '100%' }}>Send Message</button>
-            </form>
+            </div>
           </FadeInSection>
         </div>
       </div>

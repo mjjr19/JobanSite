@@ -99,16 +99,25 @@
       width: 100%;
       height: 100%;
       position: relative;
-      background-color: #1a2b42;
       border-radius: 5px 15px 15px 5px;
       box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 20px;
+      overflow: hidden;
       border: 1px solid rgba(255,255,255,0.1);
+      background: transparent !important;
+
+      img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        display: block !important;
+        position: relative;
+        z-index: 2;
+      }
+
+      /* Hide any text content that might be showing */
+      h2, p {
+        display: none !important;
+      }
 
       /* Decorative elements simulating a book */
       &::before {
@@ -120,21 +129,8 @@
         width: 2px;
         background: rgba(255,255,255,0.2);
         box-shadow: 4px 0 0 rgba(255,255,255,0.1);
-      }
-
-      h2 {
-        font-family: var(--font-heading);
-        color: var(--color-gold);
-        font-size: 2.5rem;
-        margin-bottom: 10px;
-        border: 2px solid var(--color-gold);
-        padding: 10px;
-      }
-
-      p {
-        color: var(--color-white);
-        font-family: var(--font-body);
-        letter-spacing: 1px;
+        z-index: 3;
+        pointer-events: none;
       }
     }
   }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { navLinks } from '../../data/content';
+import { navLinks, youtubeChannel } from '../../data/content';
 import { Link } from 'react-router-dom';
 import { FaYoutube, FaFacebook, FaInstagram, FaEnvelope } from 'react-icons/fa';
 import './Footer.scss';
@@ -28,7 +28,7 @@ const Footer = () => {
           <div className="footer-contact">
             <h4>Connect</h4>
             <div className="social-icons">
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
+              <a href={youtubeChannel.url} target="_blank" rel="noopener noreferrer" title="YouTube Channel"><FaYoutube /></a>
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
               <Link to="/contact"><FaEnvelope /></Link>

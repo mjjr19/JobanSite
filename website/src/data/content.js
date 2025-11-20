@@ -45,10 +45,10 @@ export const bio = {
 };
 
 export const book = {
-  title: "Kiprah Dakwah",
-  subtitle: "Memoir of a Preacher in America",
-  description: "A memoir reflecting on 30 years of da‘wah in the United States. The newly released English edition shares stories of those who embraced Islam, lessons from community service, and insights into the challenges and blessings of spreading Islam in America.",
-  coverImage: "/book-cover-placeholder.jpg", // We'll need a placeholder or actual image
+  title: "Imam Mohamad Joban",
+  subtitle: "30-Year Journey of Da'wah in America",
+  description: "A memoir reflecting on 30 years of da'wah in the United States. The newly released English edition shares stories of those who embraced Islam, lessons from community service, and insights into the challenges and blessings of spreading Islam in America.",
+  coverImage: "/bookcover.png",
   buyLink: "https://forms.gle/ubWqq86JXtA6gC4Y8", // Updated Link
 };
 
@@ -61,24 +61,29 @@ export const contactCategories = [
   "Other"
 ];
 
+export const youtubeChannel = {
+  handle: '@ustadhmj',
+  url: 'https://youtube.com/@ustadhmj'
+};
+
 export const videos = [
   {
     id: "1",
-    title: "Understanding the Quran",
+    title: "Seek Refuge from Evil of Nafs",
     category: "Tafsir",
-    url: "https://www.youtube.com/embed/dQw4w9WgXcQ" // Placeholder
+    url: "https://youtu.be/MZGsnzCdIBE?si=ws1FBFUmU5l-mqup" 
   },
   {
     id: "2",
-    title: "Marriage in Islam",
-    category: "Family",
-    url: "https://www.youtube.com/embed/dQw4w9WgXcQ" // Placeholder
+    title: "Dari Purwakarta sampai Amerika Serikat | Ustadh Mohamad Joban",
+    category: "Biography",
+    url: "https://youtu.be/EfbJKtPX-vI?si=8DIhIA-t0HJNC5cq"
   },
   {
     id: "3",
-    title: "Youth Guidance",
-    category: "Youth",
-    url: "https://www.youtube.com/embed/dQw4w9WgXcQ" // Placeholder
+    title: "Sheikh Mohamad Joban | 2014 Hajj Training Part 1: The Fiqh of Hajj",
+    category: "Hajj",
+    url: "https://youtu.be/xkvhqB4SuTU?si=sNNmXS660JiroZOQ"
   }
 ];
 

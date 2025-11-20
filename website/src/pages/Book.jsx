@@ -15,20 +15,23 @@ const Book = () => {
             <TiltCard>
               <div style={{ 
                 width: '100%', 
-                height: '500px', 
-                backgroundColor: '#1a2b42', 
                 display: 'flex', 
                 alignItems: 'center', 
                 justifyContent: 'center',
-                color: 'white',
-                border: '1px solid #333',
                 borderRadius: '5px',
+                overflow: 'hidden',
                 boxShadow: '0 20px 40px rgba(0,0,0,0.2)'
               }}>
-                {/* Placeholder */}
-                <h2 style={{ fontFamily: 'var(--font-heading)', border: '2px solid var(--color-gold)', padding: '20px', color: 'var(--color-gold)' }}>
-                  {book.title}
-                </h2>
+                <img 
+                  src={book.coverImage} 
+                  alt={`${book.title} - ${book.subtitle}`}
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                    display: 'block',
+                    borderRadius: '5px'
+                  }}
+                />
               </div>
             </TiltCard>
           </FadeInSection>

@@ -37,12 +37,15 @@ const Hero = () => {
         >
           <TiltCard className="hero-book-card">
             <div className="book-cover">
-              {/* Placeholder for book cover */}
-              <div className="book-spine"></div>
-              <div className="book-front">
-                <h2>{book.title}</h2>
-                <p>Sheikh Mohamad Joban</p>
-              </div>
+              <img 
+                src={book.coverImage} 
+                alt={`${book.title} - ${book.subtitle}`}
+                onError={(e) => {
+                  console.error('Image failed to load:', book.coverImage);
+                  e.target.style.display = 'none';
+                }}
+                onLoad={() => console.log('Image loaded successfully:', book.coverImage)}
+              />
             </div>
           </TiltCard>
         </motion.div>
