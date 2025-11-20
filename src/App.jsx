@@ -11,8 +11,11 @@ import Contact from './pages/Contact';
 import './styles/global.scss';
 
 function App() {
+  // Use basename for GitHub Pages, empty for local development
+  const basename = import.meta.env.PROD ? '/JobanSite' : '';
+  
   return (
-    <Router>
+    <Router basename={basename}>
       <ScrollToTop />
       <div className="app-container">
         <Navbar />
