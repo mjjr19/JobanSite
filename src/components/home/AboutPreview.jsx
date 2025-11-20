@@ -12,7 +12,7 @@ const AboutPreview = () => {
           <div className="about-image">
             <div className="image-placeholder">
               <img 
-                src="/Biopic.jpg" 
+                src={`${import.meta.env.BASE_URL}Biopic.jpg`}
                 alt={bio.name}
                 style={{
                   width: '100%',

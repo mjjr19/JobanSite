@@ -48,7 +48,7 @@ export const book = {
   title: "Imam Mohamad Joban",
   subtitle: "30-Year Journey of Da'wah in America",
   description: "A memoir reflecting on 30 years of da'wah in the United States. The newly released English edition shares stories of those who embraced Islam, lessons from community service, and insights into the challenges and blessings of spreading Islam in America.",
-  coverImage: "/bookcover.png",
+  coverImage: `${import.meta.env.BASE_URL}bookcover.png`,
   buyLink: "https://forms.gle/ubWqq86JXtA6gC4Y8", // Updated Link
 };
 
