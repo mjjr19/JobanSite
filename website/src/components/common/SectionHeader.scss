@@ -1,0 +1,39 @@
+@import '../../styles/variables';
+
+.section-header {
+  margin-bottom: var(--spacing-lg);
+
+  .section-subtitle {
+    display: block;
+    color: var(--color-gold);
+    font-family: var(--font-body);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    color: var(--color-navy);
+    margin-bottom: 15px;
+
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+  }
+
+  .section-divider {
+    height: 3px;
+    width: 60px;
+    background-color: var(--color-gold);
+    margin-top: 10px;
+
+    .text-center & {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
